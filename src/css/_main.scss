@@ -1,0 +1,33 @@
+@import "_variables";
+
+.main {
+  height: 400px;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+  max-width: 700px;
+  margin: 50px auto 0 auto;
+
+  > .main__item {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 15px solid;
+
+    &.paper {
+      border-color: blue;
+    }
+
+    &.scissors {
+      border-color: yellow;
+    }
+
+    &.rock {
+      border-color: red;
+    }
+  }
+}
