@@ -7,7 +7,8 @@ import rockIcon from "../images/icon-rock.svg";
 function Main() {
 
     return (
-        <div className="main" style={{backgroundImage: `url(${bgTriangle})`}}>
+        <div className="main">
+            <img className="triangle" src={bgTriangle}/>
             <div className="main__item paper" style={{backgroundImage: `url(${paperIcon})`}}></div>
             <div className="main__item scissors" style={{backgroundImage: `url(${scissorsIcon})`}}></div>
             <div className="main__item rock" style={{backgroundImage: `url(${rockIcon})`}}></div>

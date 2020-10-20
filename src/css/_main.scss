@@ -5,18 +5,23 @@
   background-size: 35%;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid white;
-  max-width: 700px;
+  max-width: 400px;
   margin: 50px auto 0 auto;
 
+  > .triangle {
+    position: absolute;
+    transform: translateX(-150px) translateY(50px);
+  }
+
   > .main__item {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    border: 15px solid;
+    border: 18px solid;
+    position: absolute;
 
     &.paper {
       border-color: blue;
@@ -24,10 +29,12 @@
 
     &.scissors {
       border-color: yellow;
+      transform: translateX(245px);
     }
 
     &.rock {
       border-color: red;
+      transform: translateX(125px) translateY(230px);
     }
   }
 }
