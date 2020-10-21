@@ -4,7 +4,7 @@ function Scorebox() {
     return (
         <div className="scorebox">
             <div className="scorebox__title">Score</div>
-            <div className="scorebox__score">12</div>
+            <div className="scorebox__score">0</div>
         </div>
     )
 }

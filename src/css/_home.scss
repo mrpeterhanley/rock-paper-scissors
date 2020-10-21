@@ -1,0 +1,56 @@
+@import "_variables";
+
+.home {
+  height: 400px;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  margin: 50px auto 0 auto;
+  position: relative;
+
+  .triangle {
+    position: absolute;
+    transform: translateX(-150px) translateY(50px);
+  }
+
+  .home__item {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 18px solid;
+    position: absolute;
+    transition: 0.2s;
+
+    &.home__paper {
+      border-color: blue;
+      transform: translateX(0px);
+      box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px darken(blue, 15%);
+      &:hover {
+        transform: translateX(0px) scale(1.2);
+      }
+    }
+
+    &.home__scissors {
+      border-color: yellow;
+      transform: translateX(230px);
+      box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1),
+        0px 8px darken(yellow, 15%);
+      &:hover {
+        transform: translateX(230px) scale(1.2);
+      }
+    }
+
+    &.home__rock {
+      border-color: red;
+      transform: translateX(120px) translateY(230px);
+      box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px darken(red, 15%);
+      &:hover {
+        transform: translateX(120px) translateY(230px) scale(1.2);
+      }
+    }
+  }
+}

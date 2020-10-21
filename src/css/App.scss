@@ -1,7 +1,9 @@
 @import "_variables";
 @import "_header";
 @import "_scorebox";
-@import "_main";
+@import "_home";
+@import "_play";
+@import "_footer";
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -9,4 +11,7 @@ body {
   color: white;
   letter-spacing: 1px;
   text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

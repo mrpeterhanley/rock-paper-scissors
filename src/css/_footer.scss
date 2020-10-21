@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin: 25px;
+    padding: 7px 25px;
+    text-transform: uppercase;
+    background: none;
+    color: lighten($header-outline, 20%);
+    border: 3px solid $header-outline;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}
