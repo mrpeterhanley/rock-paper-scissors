@@ -1,9 +1,39 @@
 .play-wrapper {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
+
+  .game__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+    &.invisible {
+      display: none;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .play-again__button {
+      background-color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: $border-radius-title-button;
+      font-size: 0.8em;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
 
   .pick {
     display: flex;
@@ -15,11 +45,18 @@
     }
 
     .pick__item {
-      margin-top: 50px;
+      margin: 50px 40px 0 40px;
       width: 200px;
       height: 200px;
       background-size: 50%;
-      @include play-item(blue);
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border: 18px solid;
+      border-color: transparent;
+      font-size: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &.pick__scissors {
         @include play-item(yellow);

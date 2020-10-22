@@ -1,10 +1,10 @@
 import React from "react";
 
-function Scorebox() {
+function Scorebox(props) {
     return (
         <div className="scorebox">
             <div className="scorebox__title">Score</div>
-            <div className="scorebox__score">0</div>
+            <div className="scorebox__score">{props.score}</div>
         </div>
     )
 }

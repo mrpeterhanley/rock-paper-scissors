@@ -1,7 +1,7 @@
 import React from "react";
 import Scorebox from "./Scorebox";
 
-function Header() {
+function Header(props) {
     return (
         <header>
             <h1 className="header__title">
@@ -9,7 +9,7 @@ function Header() {
                 <span>Paper</span>
                 <span>Scissors</span>
             </h1>
-            <Scorebox />
+            <Scorebox score={props.score}/>
         </header>
     )
 }

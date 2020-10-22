@@ -19,6 +19,8 @@
     height: 120px;
     position: absolute;
     transition: 0.2s;
+    border-radius: 50%;
+    border: 18px solid;
 
     &.home__paper {
       transform: translateX(0px);
