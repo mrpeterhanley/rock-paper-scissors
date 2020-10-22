@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
@@ -13,16 +13,25 @@ import Footer from "./Footer";
 import '../css/App.scss';
 
 function App() {
+
+    const [myPick, setMyPick] = useState("");
+    const [housePick, setHousePick] = useState("");
+
+    useEffect(() => {
+        const choices = ["rock", "paper", "scissors"];
+        const randomChoice = choices[Math.floor((Math.random()*3))];
+        setHousePick(randomChoice);
+    },[myPick, setHousePick])
     
     return (
          <Router className="wrapper">
             <Header />
             <Switch className="main">
                 <Route path="/play">
-                    <Play />
+                    <Play mine={myPick} house={housePick} />
                 </Route>
                 <Route path="/">
-                    <Home />
+                    <Home setPick={setMyPick}/>
                 </Route>
             </Switch>
             <Footer />

@@ -1,4 +1,37 @@
 .play-wrapper {
+  width: 800px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 60px;
+
+  .pick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pick__title {
+      text-transform: uppercase;
+    }
+
+    .pick__item {
+      margin-top: 50px;
+      width: 200px;
+      height: 200px;
+      background-size: 50%;
+      @include play-item(blue);
+
+      &.pick__scissors {
+        @include play-item(yellow);
+      }
+
+      &.pick__paper {
+        @include play-item(blue);
+      }
+
+      &.pick__rock {
+        @include play-item(red);
+      }
+    }
+  }
 }

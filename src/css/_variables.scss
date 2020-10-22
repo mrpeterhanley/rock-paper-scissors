@@ -22,3 +22,13 @@ $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
 $border-radius-title-button: 0.4rem;
+
+@mixin play-item($color) {
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 18px solid;
+  border-color: $color;
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px darken($color, 15%);
+}
