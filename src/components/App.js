@@ -28,7 +28,8 @@ function App() {
     },[setMyPick]);
 
     return (
-         <Router className="wrapper">
+         <Router>
+             <div className="wrapper">
             <Header score={gameScore}/>
             <Switch className="main">
                 <Route path="/play">
@@ -39,6 +40,7 @@ function App() {
                 </Route>
             </Switch>
             <Footer />
+            </div>
         </Router>
     )
 }

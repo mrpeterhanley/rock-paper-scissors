@@ -10,15 +10,16 @@ body {
   background: $background-gradient;
   color: white;
   letter-spacing: 1px;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
-#root {
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
+  padding: 0 20px;
 }

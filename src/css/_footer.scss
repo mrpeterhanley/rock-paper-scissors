@@ -21,3 +21,9 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  footer {
+    justify-content: center;
+  }
+}
