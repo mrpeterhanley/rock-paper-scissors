@@ -3,21 +3,9 @@ $background-gradient: radial-gradient(
   rgba(31, 55, 86, 1) 0%,
   rgba(20, 21, 57, 1) 100%
 );
-$scissors-gradient: radial-gradient(
-  circle,
-  rgba(236, 158, 14, 1) 0%,
-  rgba(236, 169, 34, 1) 100%
-);
-$paper-gradient: radial-gradient(
-  circle,
-  rgba(72, 101, 244, 1) 0%,
-  rgba(86, 113, 245, 1) 100%
-);
-$rock-gradient: radial-gradient(
-  circle,
-  rgba(220, 46, 78, 1) 0%,
-  rgba(221, 64, 93, 1) 100%
-);
+$scissors-color: hsl(40, 84%, 53%);
+$paper-color: hsl(230, 89%, 65%);
+$rock-color: hsl(349, 70%, 56%);
 $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);

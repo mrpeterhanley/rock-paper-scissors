@@ -2,11 +2,12 @@
 
 .home {
   height: 400px;
+  width: 100%;
   background-size: 35%;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 400px;
-  margin: 50px auto 0 auto;
+  flex: 1;
   position: relative;
 
   .triangle {
@@ -23,26 +24,30 @@
     border: 18px solid;
 
     &.home__paper {
-      transform: translateX(0px);
-      @include play-item(blue);
+      $position-x: 0px;
+      transform: translateX($position-x);
+      @include play-item($paper-color);
       &:hover {
-        transform: translateX(0px) scale(1.2);
+        transform: translateX($position-x) scale(1.2);
       }
     }
 
     &.home__scissors {
-      transform: translateX(230px);
-      @include play-item(yellow);
+      $position-x: 250px;
+      transform: translateX($position-x);
+      @include play-item($scissors-color);
       &:hover {
-        transform: translateX(230px) scale(1.2);
+        transform: translateX($position-x) scale(1.2);
       }
     }
 
     &.home__rock {
-      transform: translateX(120px) translateY(230px);
-      @include play-item(red);
+      $position-x: 125px;
+      $position-y: 230px;
+      transform: translateX($position-x) translateY($position-y);
+      @include play-item($rock-color);
       &:hover {
-        transform: translateX(120px) translateY(230px) scale(1.2);
+        transform: translateX($position-x) translateY($position-y) scale(1.2);
       }
     }
   }

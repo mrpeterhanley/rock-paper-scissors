@@ -12,6 +12,8 @@ function Play(props) {
     const [housePickElement, setElement] = useState("");
     const [resultMessage, setResultMessage] = useState("");
 
+    
+
     function playGame() {
 
         const currentScore = props.score;
@@ -81,7 +83,7 @@ function Play(props) {
             </div>
             <div className={"game__result " + (resultMessage.length? "" : "invisible")}>
                 <h3>{resultMessage}</h3>
-                <Link className="play-again__button " to="/">Play Again</Link>
+                <Link className="play-again__button " to="/" onClick={()=>(props.setHousePick())}>Play Again</Link>
             </div>
             {housePickElement? housePickElement : 
                 <div className="pick">

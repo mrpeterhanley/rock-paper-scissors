@@ -10,8 +10,16 @@ body {
   background: $background-gradient;
   color: white;
   letter-spacing: 1px;
-  text-align: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
 }

@@ -59,15 +59,15 @@
       justify-content: center;
 
       &.pick__scissors {
-        @include play-item(yellow);
+        @include play-item($scissors-color);
       }
 
       &.pick__paper {
-        @include play-item(blue);
+        @include play-item($paper-color);
       }
 
       &.pick__rock {
-        @include play-item(red);
+        @include play-item($rock-color);
       }
     }
   }

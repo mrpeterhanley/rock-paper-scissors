@@ -17,19 +17,22 @@ function App() {
     const [housePick, setHousePick] = useState("");
     const [gameScore, setGameScore] = useState(0);
 
-    useEffect(() => {
+    function newHousePick() {
         const choices = ["rock", "paper", "scissors"];
         const randomChoice = choices[Math.floor((Math.random()*3))];
         setHousePick(randomChoice);
-        console.log("Set new house pick: " + randomChoice);
-    },[myPick, setMyPick, housePick, setHousePick]);
+    }
+
+    useEffect(() => {
+        newHousePick();
+    },[setMyPick]);
 
     return (
          <Router className="wrapper">
             <Header score={gameScore}/>
             <Switch className="main">
                 <Route path="/play">
-                    <Play mine={myPick} house={housePick} score={gameScore} setScore={setGameScore}/>
+                    <Play mine={myPick} house={housePick} score={gameScore} setScore={setGameScore} setHousePick={newHousePick}/>
                 </Route>
                 <Route path="/">
                     <Home setPick={setMyPick} />
