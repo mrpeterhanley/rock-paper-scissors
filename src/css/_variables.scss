@@ -17,4 +17,5 @@ $border-radius-title-button: 0.4rem;
   background-repeat: no-repeat;
   border-color: $color;
   box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px darken($color, 15%);
+  transition: 0.2s;
 }

@@ -3,9 +3,6 @@
 .home {
   height: 400px;
   width: 100%;
-  background-size: 35%;
-  background-repeat: no-repeat;
-  background-position: center;
   max-width: 400px;
   flex: 1;
   position: relative;
@@ -29,6 +26,7 @@
       @include play-item($paper-color);
       &:hover {
         transform: translateX($position-x) scale(1.2);
+        transition: 0.2s;
       }
     }
 
@@ -48,6 +46,49 @@
       @include play-item($rock-color);
       &:hover {
         transform: translateX($position-x) translateY($position-y) scale(1.2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home {
+    max-width: 225px;
+
+    .triangle {
+      max-width: 225px;
+      transform: translateX(-120px) translateY(50px);
+    }
+
+    .home__item {
+      width: 90px;
+      height: 90px;
+      border: 8px solid;
+      background-size: 50%;
+
+      &.home__paper {
+        $position-x: -30px;
+        transform: translateX($position-x);
+        &:hover {
+          transform: translateX($position-x) scale(1.2);
+        }
+      }
+
+      &.home__scissors {
+        $position-x: 140px;
+        transform: translateX($position-x);
+        &:hover {
+          transform: translateX($position-x) scale(1.2);
+        }
+      }
+
+      &.home__rock {
+        $position-x: 55px;
+        $position-y: 165px;
+        transform: translateX($position-x) translateY($position-y);
+        &:hover {
+          transform: translateX($position-x) translateY($position-y) scale(1.2);
+        }
       }
     }
   }

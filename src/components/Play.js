@@ -81,7 +81,7 @@ function Play(props) {
                 <div className="pick__title">You Picked {myPick}</div> 
                 <div className={"pick__item " + setMyPickClass(myPick)} style={{backgroundImage: `url(${setMyPickIcon(myPick)}`}}></div>   
             </div>
-            <div className={"game__result " + (resultMessage.length? "" : "invisible")}>
+            <div className={"result__desktop game__result " + (resultMessage.length? "" : "invisible")}>
                 <h3>{resultMessage}</h3>
                 <Link className="play-again__button " to="/" onClick={()=>(props.setHousePick())}>Play Again</Link>
             </div>
@@ -91,6 +91,10 @@ function Play(props) {
                     <div className="pick__item" ><span>{countDown}</span></div>
                 </div>
             }
+            <div className={"result__mobile game__result " + (resultMessage.length? "" : "invisible")}>
+                <h3>{resultMessage}</h3>
+                <Link className="play-again__button " to="/" onClick={()=>(props.setHousePick())}>Play Again</Link>
+            </div>
         </div>
     )
 }

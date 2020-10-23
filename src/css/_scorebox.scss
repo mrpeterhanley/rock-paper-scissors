@@ -11,3 +11,15 @@
     font-weight: 700;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .scorebox {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+
+    &__score {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+}

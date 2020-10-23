@@ -6,7 +6,7 @@ header {
   max-width: 700px;
   width: 100%;
   padding: 20px;
-  margin: 20px 20px 50px 20px;
+  margin: 20px 20px 80px 20px;
 
   > .header__title {
     display: flex;
@@ -18,5 +18,17 @@ header {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    padding: 20px;
+    margin: 20px 20px 60px 20px;
+
+    > .header__title {
+      line-height: 1.3rem;
+      font-size: 1.6rem;
+    }
   }
 }

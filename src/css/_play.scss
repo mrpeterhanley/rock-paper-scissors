@@ -3,13 +3,18 @@
   margin: auto;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 
   .game__result {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
+
+    &.result__mobile {
+      display: none;
+    }
 
     &.invisible {
       display: none;
@@ -68,6 +73,67 @@
 
       &.pick__rock {
         @include play-item($rock-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .play-wrapper {
+    margin-top: 10px;
+
+    .game__result {
+      &.result__mobile {
+        display: inline-block;
+        width: 500px;
+      }
+      &.result__desktop {
+        display: none;
+      }
+      &.invisible {
+        display: none;
+      }
+    }
+
+    .pick {
+      .pick__title {
+        text-transform: uppercase;
+      }
+
+      .pick__item {
+        margin: 30px 35px 0 35px;
+        width: 150px;
+        height: 150px;
+        border: 18px solid;
+        border-color: transparent;
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .play-wrapper {
+    .game__result {
+      &.result__mobile {
+        width: 250px;
+      }
+    }
+
+    .pick {
+      .pick__title {
+        max-width: 100px;
+        height: 80px;
+      }
+
+      .pick__item {
+        margin: 10px 20px 0 20px;
+        width: 100px;
+        height: 100px;
+        background-size: 50%;
+        border: 10px solid;
+        border-color: transparent;
+        font-size: 4rem;
       }
     }
   }
