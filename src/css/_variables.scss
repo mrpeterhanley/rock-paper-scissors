@@ -3,6 +3,7 @@ $background-gradient: radial-gradient(
   rgba(31, 55, 86, 1) 0%,
   rgba(20, 21, 57, 1) 100%
 );
+$background-color: rgb(20, 21, 57);
 $scissors-color: hsl(40, 84%, 53%);
 $paper-color: hsl(230, 89%, 65%);
 $rock-color: hsl(349, 70%, 56%);
@@ -17,5 +18,4 @@ $border-radius-title-button: 0.4rem;
   background-repeat: no-repeat;
   border-color: $color;
   box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px darken($color, 15%);
-  transition: 0.2s;
 }
