@@ -36,6 +36,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .footer__message {
+    font-size: 0.8em;
+  }
+}
+
 @media screen and (max-width: 450px) {
   footer {
     display: flex;
