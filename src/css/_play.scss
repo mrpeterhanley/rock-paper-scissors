@@ -73,14 +73,29 @@
 
       &.pick__scissors {
         @include play-item($scissors-color);
+        box-shadow: item-shadow($scissors-color);
+
+        &.winner {
+          box-shadow: item-shadow($scissors-color), winner-shadow();
+        }
       }
 
       &.pick__paper {
         @include play-item($paper-color);
+        box-shadow: item-shadow($paper-color);
+
+        &.winner {
+          box-shadow: item-shadow($paper-color), winner-shadow();
+        }
       }
 
       &.pick__rock {
         @include play-item($rock-color);
+        box-shadow: item-shadow($rock-color);
+
+        &.winner {
+          box-shadow: item-shadow($rock-color), winner-shadow();
+        }
       }
     }
   }

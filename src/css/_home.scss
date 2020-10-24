@@ -24,6 +24,7 @@
       $position-x: 0px;
       transform: translateX($position-x);
       @include play-item($paper-color);
+      box-shadow: item-shadow($paper-color);
       &:hover {
         transform: translateX($position-x) scale(1.2);
         transition: 0.2s;
@@ -34,6 +35,7 @@
       $position-x: 250px;
       transform: translateX($position-x);
       @include play-item($scissors-color);
+      box-shadow: item-shadow($scissors-color);
       &:hover {
         transform: translateX($position-x) scale(1.2);
       }
@@ -44,6 +46,7 @@
       $position-y: 230px;
       transform: translateX($position-x) translateY($position-y);
       @include play-item($rock-color);
+      box-shadow: item-shadow($rock-color);
       &:hover {
         transform: translateX($position-x) translateY($position-y) scale(1.2);
       }
