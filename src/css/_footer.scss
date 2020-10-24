@@ -1,9 +1,17 @@
 footer {
   width: 100vw;
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-areas: "left right";
+
+  .footer__message {
+    color: lighten($header-outline, 20%);
+    align-self: end;
+    grid-area: left;
+  }
 
   button {
+    grid-area: right;
     margin: 25px;
     padding: 7px 25px;
     text-transform: uppercase;
@@ -22,8 +30,20 @@ footer {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 450px) {
   footer {
-    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "top" "bottom";
+
+    .footer__message {
+      grid-area: bottom;
+    }
+
+    button {
+      grid-area: top;
+      justify-self: center;
+      margin: 0px;
+    }
   }
 }

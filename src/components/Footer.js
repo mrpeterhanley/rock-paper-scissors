@@ -14,6 +14,7 @@ function Footer() {
     return (
         <div>
             <footer>
+                <p className="footer__message">Made with &hearts; in Melbourne, Australia by Peter Hanley</p>
                 <button onClick={toggleModal}>Rules</button>
             </footer>
             { showModal? (
