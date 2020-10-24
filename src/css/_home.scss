@@ -1,11 +1,11 @@
 @import "_variables";
 
 .home {
-  height: 400px;
   width: 100%;
   max-width: 400px;
   flex: 1;
   position: relative;
+  margin-top: 50px;
 
   .triangle {
     position: absolute;
