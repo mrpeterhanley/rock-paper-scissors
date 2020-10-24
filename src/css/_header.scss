@@ -6,7 +6,7 @@ header {
   max-width: 700px;
   width: 100%;
   padding: 20px;
-  margin: 20px 0 50px 0;
+  margin-top: 20px;
   box-sizing: border-box;
 
   > .header__title {
@@ -25,7 +25,7 @@ header {
 @media screen and (max-width: 550px) {
   header {
     padding: 20px;
-    margin: 20px 20px 40px 20px;
+    // margin: 20px 20px 40px 20px;
 
     > .header__title {
       line-height: 1.3rem;
