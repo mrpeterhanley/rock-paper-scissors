@@ -76,13 +76,23 @@ function Play(props) {
         }
     }
 
+    function wait(ms = 0) {
+        return new Promise (function(resolve) {
+            setTimeout(resolve, ms);
+        })
+    }
+
     useEffect(() => {
 
         chooseWinner();
 
-        setTimeout(() => (setCountDown("2")), 500);
-        setTimeout(() => (setCountDown("1")), 1000);
-        setTimeout(() => {
+        wait(500).then(() => {
+            setCountDown("2");
+            return wait(500);
+        }).then(() => {
+            setCountDown("1");
+            return wait(500);
+        }).then(() => {
             setHouseElement(
                 <div className="pick">
                     <div className="result__desktop pick__title">The House Picked {housePick}</div>
@@ -98,7 +108,8 @@ function Play(props) {
                 </div>
             )
             showWinner();
-        },1500);
+        })
+
     }, [setHouseElement, setCountDown, houseWins, playerWins])
 
     return (
